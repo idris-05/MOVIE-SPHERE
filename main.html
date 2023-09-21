@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width  initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="main-navbar.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-11" viewBox="0 0 40 40">
+       <path d="M15.553 31.106c8.59 0 15.553-6.963 15.553-15.553S24.143 0 15.553 0 0 6.963 0 15.553s6.963 15.553 15.553 15.553zm0-3.888c6.443 0 11.665-5.222 11.665-11.665 0-6.442-5.222-11.665-11.665-11.665-6.442 0-11.665 5.223-11.665 11.665 0 6.443 5.223 11.665 11.665 11.665zM27.76 31.06c-.78-.78-.778-2.05.004-2.833l.463-.463c.783-.783 2.057-.78 2.834-.003l8.168 8.17c.782.78.78 2.05-.003 2.832l-.463.463c-.783.783-2.057.78-2.833.003l-8.17-8.167z" fill-rule="evenodd" />
+     </symbol>
+     <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-clear-2" viewBox="0 0 20 20">
+       <path d="M8.96 10L.52 1.562 0 1.042 1.04 0l.522.52L10 8.96 18.438.52l.52-.52L20 1.04l-.52.522L11.04 10l8.44 8.438.52.52L18.96 20l-.522-.52L10 11.04l-8.438 8.44-.52.52L0 18.96l.52-.522L8.96 10z" fill-rule="evenodd" />
+     </symbol>
+   </svg> 
+
+<div class="full-page">
+
+    <nav id='menu'>
+        <!-- <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label> -->
+        <div class="navbar-content hide-navbar-in-bigening">
+          <a  href='main.html'>Latest</a>
+          <div id="categories"  class="dropdown">
+            <a id="down-symbol" class='dropdown-arrow' >Categories</a>
+            <ul class='sub-menus'>
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Adventure</a></li>
+              <li><a href="#">Drama</a></li>
+              <li><a href="#">Crime</a></li>
+              <li><a href="#">Fantasy</a></li>
+              <li><a href="#">Family</a></li>
+              <li><a href="#">War</a></li>
+              <li><a href="#">Biography</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Comedy</a></li>
+            </ul>
+          </div>
+          <a id="toprated" href='#'>Top rated</a>
+          <a id="watchlater"  href='http://'>Watch Later</a> 
+          <form novalidate class="searchbox sbx-amazon">
+            <div class="sbx-amazon__wrapper">
+              <input type="search" name="search" placeholder="Search..." autocomplete="off" required="required" class="sbx-amazon__input">
+                <button type="reset" title="Clear the search query." class="sbx-amazon__reset">
+                 <svg role="img" aria-label="Reset"><use xlink:href="#sbx-icon-clear-2"></use></svg>
+                </button>
+                <button type="submit" title="Submit your search query." class="sbx-amazon__submit">
+                 <svg role="img" aria-label="Search"><use xlink:href="#sbx-icon-search-11"></use></svg>
+                </button>
+            </div>
+          </form>
+          <div id="mode"> 
+            <button onclick="toggleMode()" type="submit" title="dark / light mode">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                <path id="svg-path" d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM80-440q-17 0-28.5-11.5T40-480q0-17 11.5-28.5T80-520h80q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440H80Zm720 0q-17 0-28.5-11.5T760-480q0-17 11.5-28.5T800-520h80q17 0 28.5 11.5T920-480q0 17-11.5 28.5T880-440h-80ZM480-760q-17 0-28.5-11.5T440-800v-80q0-17 11.5-28.5T480-920q17 0 28.5 11.5T520-880v80q0 17-11.5 28.5T480-760Zm0 720q-17 0-28.5-11.5T440-80v-80q0-17 11.5-28.5T480-200q17 0 28.5 11.5T520-160v80q0 17-11.5 28.5T480-40ZM226-678l-43-42q-12-11-11.5-28t11.5-29q12-12 29-12t28 12l42 43q11 12 11 28t-11 28q-11 12-27.5 11.5T226-678Zm494 495-42-43q-11-12-11-28.5t11-27.5q11-12 27.5-11.5T734-282l43 42q12 11 11.5 28T777-183q-12 12-29 12t-28-12Zm-42-495q-12-11-11.5-27.5T678-734l42-43q11-12 28-11.5t29 11.5q12 12 12 29t-12 28l-43 42q-12 11-28 11t-28-11ZM183-183q-12-12-12-29t12-28l43-42q12-11 28.5-11t27.5 11q12 11 11.5 27.5T282-226l-42 43q-11 12-28 11.5T183-183Zm297-297Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button id="three-bar" onclick="displayThreeBarDropDown()" class='dropdown-arrow' type="button" > &equiv; </button>
+            <ul id="three-bar-content" class='sub-menus'>
+              <li><a href='#'>Contact us</a></li>
+              <li><a href='#'>About</a></li>
+              <li><a href='#'>More information</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+    <div class="film-box-lists">
+        <!-- <div class="film-box">
+            <img src="images/main/main1.jpg" alt="" srcset="">
+            <>Avengers: Endgame</ h4>
+            <h6>Action Adventure Drama</h6>
+        </div>   -->        
+    </div>   
+
+</div>
+
+
+<!-- <script src="movies-store.js"></script> -->
+<script type="text/javascript">
+  document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() { 
+     this.parentNode.querySelector('input').focus();
+    });
+</script>
+<script src="main.js"></script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
