@@ -4,15 +4,3 @@ body ,html{
     height: 100%;
     overflow: hidden;
 }
-
-.container {
-    background-image: url('images/main/main2.jpg');
-    background-size: cover;
-    background-attachment: fixed; 
-    height: 100%;
-    background-position: center;
-    filter: blur(5px);
-    overflow: hidden;
-    /* box-shadow: inset 0px 0px 150px 150px rgba(0,0,0,0.67); */
-    /* border:2px solid black; */
-}

@@ -1,73 +1,6 @@
-// import { movies } from "./movies-store.js";
 
-const movies = [
-    {
-        name:'Avengers: Endgame',
-        imagePath:'images/main/main1.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Drama']
-    },
-    {
-        name:'Joker',
-        imagePath:'images/main/main2.jpg' ,
-        category: [ 'Crime', 'Drama', 'Thriller']
-    },
-    {
-        name:'Mythica: The Darkspore',
-        imagePath:'images/main/main3.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Fantasy']
-    },
-    {
-        name:'Maleficent: Mistress of Evil',
-        imagePath:'images/main/main4.jpg' ,
-        category: [ 'Adventure', 'Family' ,'Fantasy']
-    },
-    {
-        name:'Doctor Strange in the Multiverse of Madness',
-        imagePath:'images/main/main5.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Fantasy']
-    },
-    {
-        name:'Alone',
-        imagePath:'images/main/main6.jpg' ,
-        category: [ 'Thriller']
-    },
-    {
-        name:'Inception',
-        imagePath:'images/main/main7.jpg' ,
-        category: [ 'Action' , 'Adventure' , 'Sci-Fi']
-    },
-    {
-        name:'Fury',
-        imagePath:'images/main/main8.jpg' ,
-        category: [ 'Action', 'Drama', 'War']
-    },
-    {
-        name:'Oppenheimer',
-        imagePath:'images/main/main9.jpg' ,
-        category: [ 'Biography', 'Drama', 'History']
-    },
-    {
-        name:'Pirates of the Caribbean: The Curse of the Black Pearl',
-        imagePath:'images/main/main10.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Fantasy']
-    },
-    {
-        name:'The Northman',
-        imagePath:'images/main/main11.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Drama']
-    },
-    {
-        name:'Interstellar',
-        imagePath:'images/main/main12.jpg' ,
-        category: [ 'Adventure', 'Drama', 'Sci-Fi']
-    },
-    {
-        name:'Zootopia',
-        imagePath:'images/main/main13.jpg' ,
-        category: [ 'Animation', 'Adventure', 'Comedy']
-    },
- ] 
-
+  const navbarContainer = document.getElementById("menu")
+  navbarContainer.innerHTML = navbarHTMLContent
 
 function displayMovies (){
 
@@ -87,6 +20,10 @@ function displayMovies (){
         const movieCategories = document.createElement('h6')
      movieCategories.textContent = movie.category.join(' ');
 
+     movieDivContainer.addEventListener("click", () => {
+        window.location.href = `details.html`;
+     });
+
      movieDivContainer.appendChild(movieImage)
      movieDivContainer.appendChild(movieName)
      movieDivContainer.appendChild(movieCategories) ;
@@ -96,17 +33,6 @@ function displayMovies (){
     }
 
 }
-
-
-// function updatemenu() {
-//     if (document.getElementById('responsive-menu').checked == true) {
-//       document.getElementById('menu').style.borderBottomRightRadius = '0';
-//       document.getElementById('menu').style.borderBottomLeftRadius = '0';
-//     }else{
-//       document.getElementById('menu').style.borderRadius = '10px';
-//     }
-//   }
-
 
 function toggleMode(){
     
@@ -131,130 +57,87 @@ function toggleMode(){
 }
 
 function displayThreeBarDropDown(){
-    const myThreeBarDropDown = document.querySelector("#menu  ul#three-bar-content")
+    const myThreeBarDropDown = document.getElementById("three-bar-content")
     myThreeBarDropDown.classList.toggle("set-three-bar-drop-down-to-display-block")
+
+    const threeBarItems = document.getElementById("three-bar-items")
+    threeBarItems.classList.toggle("animated-three-bar-show-up")
 }
 
-
-function setMenuFirstLoading(){
-    const previousViewPortWindow = window.innerWidth
-    const firstLimit = 1000 
-    const secondeLimit = 800
-    const thirdLimit = 600 
+function setResponsiveMenu(){
+    const limitWidth = 850
     const navbarContent = document.querySelector(".navbar-content")
-    const threeBarElement = document.getElementById("three-bar-content")
+    const threeBarItems = document.getElementById("three-bar-items")
+    const myElemenets = [ 
+        document.getElementById("watchlater") ,
+        document.getElementById("toprated") ,
+        document.getElementById("categories") ,
+        document.getElementById("latest") 
+    ]
 
+    function changeParent(){
 
-    if ( previousViewPortWindow < firstLimit ){
-        let myElement = document.getElementById("watchlater")
-        navbarContent.removeChild(myElement)
-        threeBarElement.insertBefore(myElement , threeBarElement.firstChild)
+        const viewPortWindow = window.innerWidth
 
-        if ( previousViewPortWindow < secondeLimit ){
-            let myElement = document.getElementById("toprated")
-            navbarContent.removeChild(myElement)
-            threeBarElement.insertBefore(myElement , threeBarElement.firstChild)
-
-            if ( previousViewPortWindow < thirdLimit ){
-                let myElement = document.getElementById("categories")
-                navbarContent.removeChild(myElement)
-                threeBarElement.insertBefore(myElement , threeBarElement.firstChild)
-            }
-        }
-    } 
-    navbarContent.classList.remove("hide-navbar-in-bigening") 
-}
-setMenuFirstLoading()
-
-
-
-
-function setMenuElement(){
-    const firstLimit = 1000
-    const secondeLimit = 800
-    const thirdLimit = 600
-    const navbarContent = document.querySelector(".navbar-content")
-    const threeBarElement = document.getElementById("three-bar-content")
-
-    let previousViewPortWindow = window.innerWidth
-
-    function modifyMenu(){
-        let viewPortWindow = window.innerWidth 
-
-        if ( viewPortWindow >= firstLimit ){
-            let myElement = document.getElementById("watchlater")
-            if ( myElement.parentElement === threeBarElement){
-                threeBarElement.removeChild(myElement)
-                navbarContent.insertBefore(myElement , navbarContent.children[3])
-            }
-        }
-        if( viewPortWindow < firstLimit ){
-            let myElement = document.getElementById("watchlater")
-            if (previousViewPortWindow >= 1000) {
-                if ( myElement.parentElement === navbarContent){
-                navbarContent.removeChild(myElement)
-                threeBarElement.insertBefore(myElement , threeBarElement.firstChild)
+        if (viewPortWindow < limitWidth ){
+            myElemenets.forEach(element => {
+                if ( element.parentElement != threeBarItems){
+                    threeBarItems.insertBefore( element , threeBarItems.firstChild )
                 }
-            }
+            });
         }
-        if ( viewPortWindow >= secondeLimit ){
-            let myElement = document.getElementById("toprated")
-            if ( myElement.parentElement === threeBarElement){
-                 threeBarElement.removeChild(myElement)
-                 navbarContent.insertBefore(myElement , navbarContent.children[2])
-            }
-        }
-        if( viewPortWindow < secondeLimit ){
-            let myElement = document.getElementById("toprated")
-            if (previousViewPortWindow >= 800) {
-                if ( myElement.parentElement === navbarContent){
-                    navbarContent.removeChild(myElement)
-                    threeBarElement.insertBefore(myElement , threeBarElement.firstChild)
+        else {
+             myElemenets.forEach(element => {
+                if ( element.parentElement != navbarContent){
+                    navbarContent.insertBefore( element , navbarContent.children[3] )
                 }
-            }
+            });
         }
-        if ( viewPortWindow >= thirdLimit ){
-            let myElement = document.getElementById("categories")
-            if ( myElement.parentElement === threeBarElement){
-                threeBarElement.removeChild(myElement)
-                navbarContent.insertBefore(myElement , navbarContent.children[1])
-            }
-        }
-        if( viewPortWindow < thirdLimit ){
-            let myElement = document.getElementById("categories")
-            if (previousViewPortWindow >= 600) {
-                if ( myElement.parentElement === navbarContent){
-                    navbarContent.removeChild(myElement)
-                    threeBarElement.insertBefore(myElement , threeBarElement.firstChild)
-                }
-            }
-        }
-
-        previousViewPortWindow = viewPortWindow
     }
-
-    window.addEventListener("resize" , modifyMenu )
+    changeParent()
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(changeParent, 50); 
+    });
 }
-setMenuElement()
+setResponsiveMenu()
+
+var prevScrollpos = window.scrollY;
+window.onscroll = function() {
+var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("menu").style.top = "0";
+  } else {
+    document.getElementById("menu").style.top = "-70px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+function redirectToPage(url) {
+    window.location.href = url;
+}
+
+function hideLogoOrHome(){
+    const home = document.getElementById("home")
+    const logo = document.getElementById("logo")
+    const viewPortWindow = window.innerWidth
+    const limitWidth = 850
+
+    if ( viewPortWindow < limitWidth ){
+        logo.classList.add("hide-logo-or-home")
+        home.classList.remove("hide-logo-or-home")
+    }
+    else {
+        logo.classList.remove("hide-logo-or-home")
+        home.classList.add("hide-logo-or-home")
+    }
+}
+hideLogoOrHome()
+window.addEventListener("resize" , hideLogoOrHome )
 
 
 
-
-
-// displayMovies()
-// displayMovies()
-// displayMovies()
-
-// displayMovies()
-// displayMovies()
-// displayMovies()
-
-// displayMovies()
-displayMovies()
-displayMovies()
-
-displayMovies()
-displayMovies()
-displayMovies()
-
-
+for ( let i = 0 ; i< 9 ; i++){
+    displayMovies()
+}
