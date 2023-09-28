@@ -1,6 +1,136 @@
-body ,html{
+
+*{
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
+}
+
+body{
+    /* background: linear-gradient(to right top, #0b0930, #0b0f39, #0e1346, #161a5d, #1b1d6c, #28287f, #302d8b, #383298 ) ; */
+}
+
+ .information::before{
+    content: "" ;
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    height: 50vh;
+    width: 50vw;
+    z-index: -1;
+    background:  url(https://i.pinimg.com/564x/1f/5b/1b/1f5b1bda226f24a801efbd3fc1c90428.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    /* background-position: right 10vw top 25%; */
+    background-size: 100% 100%;
+    opacity: 1 ;
+    -webkit-box-shadow:  0px 0px 150px 100px rgba(10, 24, 40,1)  inset;
+        -moz-box-shadow: 0px 0px 150px 100px rgba(10, 24, 40,1) inset;
+            box-shadow:  0px 0px 150px 100px rgba(10, 24, 40,1) inset;
+ } 
+
+.container{
+    margin: 100px 3vw 9vh 2vw ;
+    display: grid;
+    gap: 3vw;
+    grid-template-columns: 3fr 7fr ;
+}
+
+.movie-image > img{
+    height: 37vw;
+    width: 25vw;
+    border-radius: 4px;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 10px;
+    gap: calc(3vh + 1vw) ;
+}
+
+
+.publish-info , .imdb-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.imdb-image{
+    gap: 5px;
+}
+
+.imdb-image > img{
+    height: 20px;
+    width: 35px;
+}
+
+#imdb-rating {
+    display: inline-block;
+}
+
+#category{
+    color: #a39573 ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.watch-save{
+    width: 60%;
+    display: flex;
+    font-size: 14px;
+}
+.watch-save > * {
+    flex: 1 ;
+}
+
+.watch-save .play{
+    flex: 0.7
+}
+
+button{
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+svg{
+    height: 24px;
+    width: 24px;
+}
+
+button > svg{
+    fill: #a39573;
+}
+
+.play{
+    display: flex;
+    align-items: center;
+    gap: 1vw ;
+    height: 6vh;
+    background-color: #a39573 ;
+    color: #EFFAFD ;
+}
+.play > svg {
+    fill:  #0A1828 ;
+}
+
+.descreption{
+    width: 55vw;
+    word-wrap: break-word;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.authors table {
+    border-collapse: separate;
+    border-spacing:10px; 
+}
+
+.authors table tr td{
+    font-size: 15px;
 }

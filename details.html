@@ -9,11 +9,67 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="main-navbar.css">
+    <link rel="stylesheet" href="details.css">
     <title>datails</title>
 </head>
 <body>
     <nav id='menu'></nav>
+    <!-- <div class="background-container"></div> -->
+    <div class="container">
+        <div class="movie-image">
+            <img src="images/main/main1.jpg" alt="" srcset="">
+        </div>
+        <div class="information">
+            <h1> Avengers:End game</h1>
+            <div class="publish-info">
+                <span id="publish-year">1995</span>
+                <span id="movie-duration">1h 55m</span>
+                <nav class="imdb-image">
+                    <img src="images/others/imdb.svg" alt="imdb image" title="imdb rating">
+                    <nav id="imdb-rating">6.7</nav>
+                </nav>
+            </div>
+            <div id="category">
+                <nav>Action</nav>
+                <nav>Adventure</nav>
+                <nav>History</nav>
+            </div>
+            <div class="watch-save">
+                <button class="play" type="button" title="watch here">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
+                    <p> PLAY </p>
+                </button>
+                <button type="button" title="save to later">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z"/></svg>
+                </button>
+                <button type="button" title="watch trailer ">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                </button>
+            </div>
+            <div class="descreption">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis neque ipsam magni quasi in, id sed pariatur quae illo aliquam laboriosam deserunt dolores doloremque autem quas, optio maxime aut quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ducimus unde voluptatum. Unde laudantium odit facere accusamus illo eaque dolorem perspiciatis quis officia. Voluptatum provident accusamus ipsa sapiente saepe dolorum.</p>  
+            </div>
+            <div class="authors">
+                <table>
+                    <tr>
+                        <td >Directed</td>
+                        <td id="directed">Herbert Ross</td>
+                    </tr>
+                    <tr>
+                        <td >Written By</td>
+                        <td id="written">Don Roos</td>
+                    </tr>
+                    <tr>
+                        <td >Studio</td>
+                        <td id="studio">RegencEnterprises, Alcor Films, and more</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 
+
+    <script src="details.js"></script>
     <script src="movies-store.js"></script>
     <script src="main.js"></script>
 </body>

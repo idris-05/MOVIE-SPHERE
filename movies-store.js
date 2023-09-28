@@ -1,72 +1,84 @@
-
 const movies = [
-    {
-        name:'Avengers: Endgame',
-        imagePath:'images/main/main1.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Drama']
-    },
-    {
-        name:'Joker',
-        imagePath:'images/main/main2.jpg' ,
-        category: [ 'Crime', 'Drama', 'Thriller']
-    },
-    {
-        name:'Mythica: The Darkspore',
-        imagePath:'images/main/main3.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Fantasy']
-    },
-    {
-        name:'Maleficent: Mistress of Evil',
-        imagePath:'images/main/main4.jpg' ,
-        category: [ 'Adventure', 'Family' ,'Fantasy']
-    },
-    {
-        name:'Doctor Strange in the Multiverse of Madness',
-        imagePath:'images/main/main5.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Fantasy']
-    },
-    {
-        name:'Alone',
-        imagePath:'images/main/main6.jpg' ,
-        category: [ 'Thriller']
-    },
-    {
-        name:'Inception',
-        imagePath:'images/main/main7.jpg' ,
-        category: [ 'Action' , 'Adventure' , 'Sci-Fi']
-    },
-    {
-        name:'Fury',
-        imagePath:'images/main/main8.jpg' ,
-        category: [ 'Action', 'Drama', 'War']
-    },
-    {
-        name:'Oppenheimer',
-        imagePath:'images/main/main9.jpg' ,
-        category: [ 'Biography', 'Drama', 'History']
-    },
-    {
-        name:'Pirates of the Caribbean: The Curse of the Black Pearl',
-        imagePath:'images/main/main10.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Fantasy']
-    },
-    {
-        name:'The Northman',
-        imagePath:'images/main/main11.jpg' ,
-        category: [ 'Action' ,'Adventure', 'Drama']
-    },
-    {
-        name:'Interstellar',
-        imagePath:'images/main/main12.jpg' ,
-        category: [ 'Adventure', 'Drama', 'Sci-Fi']
-    },
-    {
-        name:'Zootopia',
-        imagePath:'images/main/main13.jpg' ,
-        category: [ 'Animation', 'Adventure', 'Comedy']
-    },
- ] 
-
+  {
+      id: 0,
+      name: 'Avengers: Endgame',
+      imagePath: 'images/main/main1.jpg',
+      category: ['Action', 'Adventure', 'Drama'],
+      
+  },
+  {
+      id: 1,
+      name: 'Joker',
+      imagePath: 'images/main/main2.jpg',
+      category: ['Crime', 'Drama', 'Thriller'],
+  },
+  {
+      id: 2,
+      name: 'Mythica: The Darkspore',
+      imagePath: 'images/main/main3.jpg',
+      category: ['Action', 'Adventure', 'Fantasy'],
+  },
+  {
+      id: 3,
+      name: 'Maleficent: Mistress of Evil',
+      imagePath: 'images/main/main4.jpg',
+      category: ['Adventure', 'Family', 'Fantasy'],
+  },
+  {
+      id: 4,
+      name: 'Doctor Strange in the Multiverse of Madness',
+      imagePath: 'images/main/main5.jpg',
+      category: ['Action', 'Adventure', 'Fantasy'],
+  },
+  {
+      id: 5,
+      name: 'Alone',
+      imagePath: 'images/main/main6.jpg',
+      category: ['Thriller'],
+  },
+  {
+      id: 6,
+      name: 'Inception',
+      imagePath: 'images/main/main7.jpg',
+      category: ['Action', 'Adventure', 'Sci-Fi'],
+  },
+  {
+      id: 7,
+      name: 'Fury',
+      imagePath: 'images/main/main8.jpg',
+      category: ['Action', 'Drama', 'War'],
+  },
+  {
+      id: 8,
+      name: 'Oppenheimer',
+      imagePath: 'images/main/main9.jpg',
+      category: ['Biography', 'Drama', 'History'],
+  },
+  {
+      id: 9,
+      name: 'Pirates of the Caribbean: The Curse of the Black Pearl',
+      imagePath: 'images/main/main10.jpg',
+      category: ['Action', 'Adventure', 'Fantasy'],
+  },
+  {
+      id: 10,
+      name: 'The Northman',
+      imagePath: 'images/main/main11.jpg',
+      category: ['Action', 'Adventure', 'Drama'],
+  },
+  {
+      id: 11,
+      name: 'Interstellar',
+      imagePath: 'images/main/main12.jpg',
+      category: ['Adventure', 'Drama', 'Sci-Fi'],
+  },
+  {
+      id: 12,
+      name: 'Zootopia',
+      imagePath: 'images/main/main13.jpg',
+      category: ['Animation', 'Adventure', 'Comedy'],
+  },
+];
 
 
  const navbarHTMLContent =

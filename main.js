@@ -21,7 +21,7 @@ function displayMovies (){
      movieCategories.textContent = movie.category.join(' ');
 
      movieDivContainer.addEventListener("click", () => {
-        window.location.href = `details.html`;
+        window.location.href = `details.html?id=${movie.id}`;
      });
 
      movieDivContainer.appendChild(movieImage)
