@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,20 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width  initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="main-navbar.css">
     <link rel="stylesheet" href="details.css">
     <title>datails</title>
 </head>
+
 <body>
-    <nav id='menu'></nav>
-    <!-- <div class="background-container"></div> -->
+    <!-- <nav id='menu'></nav> -->
+
     <div class="container">
-        <div class="movie-image">
-            <img src="images/main/main1.jpg" alt="" srcset="">
-        </div>
         <div class="information">
-            <h1> Avengers:End game</h1>
+            <div class="movie-title">
+                <img id="movie-title-image" src="images/movie-title/Mythica The Darkspore.png" alt="Avengers end game">
+            </div>
             <div class="publish-info">
                 <span id="publish-year">1995</span>
                 <span id="movie-duration">1h 55m</span>
@@ -30,47 +32,91 @@
                 </nav>
             </div>
             <div id="category">
-                <nav>Action</nav>
-                <nav>Adventure</nav>
-                <nav>History</nav>
-            </div>
-            <div class="watch-save">
-                <button class="play" type="button" title="watch here">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
-                    <p> PLAY </p>
-                </button>
-                <button type="button" title="save to later">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z"/></svg>
-                </button>
-                <button type="button" title="watch trailer ">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
-                </button>
+                <!-- <nav>Action</nav> -->
             </div>
             <div class="descreption">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis neque ipsam magni quasi in, id sed pariatur quae illo aliquam laboriosam deserunt dolores doloremque autem quas, optio maxime aut quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ducimus unde voluptatum. Unde laudantium odit facere accusamus illo eaque dolorem perspiciatis quis officia. Voluptatum provident accusamus ipsa sapiente saepe dolorum.</p>  
+                <p id="descreption-text">Lorem ipsum dolor sit amet consectetur sed pariatur quae illo aliquam
+                    laboriosam deserunt dolores doloremque autem quas, optio maxime aut quibusdam! Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Sit ducimus unde voluptatum. Unde laudre accusamus illo eaque
+                    dolorem perspiciatis quis officia. Voluptatum provident accusamus ipsa sapiente saepe dolorum </p>
             </div>
             <div class="authors">
                 <table>
                     <tr>
-                        <td >Directed</td>
+                        <td>Directed</td>
                         <td id="directed">Herbert Ross</td>
                     </tr>
                     <tr>
-                        <td >Written By</td>
+                        <td>Written By</td>
                         <td id="written">Don Roos</td>
-                    </tr>
-                    <tr>
-                        <td >Studio</td>
-                        <td id="studio">RegencEnterprises, Alcor Films, and more</td>
                     </tr>
                 </table>
             </div>
+            <div class="watch-save">
+                <button class="play" type="button" title="watch here">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z" />
+                    </svg>
+                    <p> PLAY </p>
+                </button>
+                <button id="save-to-later" type="button" title="save to later">
+                    <svg class="save-now" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                        width="24">
+                        <path
+                            d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+                    </svg>
+                    <svg class="already-saved " width="24" height="24" viewBox="0 0 24.00 24.00" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.12000000000000002">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M15.0309 3.30271C13.0299 2.8991 10.9701 2.8991 8.96913 3.30271C6.66186 3.76809 5 5.82231 5 8.20894V18.6292C5 20.4579 6.9567 21.596 8.51221 20.6721L11.3451 18.9895C11.7496 18.7492 12.2504 18.7492 12.6549 18.9895L15.4878 20.6721C17.0433 21.596 19 20.4579 19 18.6292V8.20894C19 5.82231 17.3381 3.76809 15.0309 3.30271Z"
+                                fill=" #a39573 " />
+                        </g>
+                    </svg>
+                </button>
+                <button type="button" title="watch trailer ">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="background-container">
+
+
+            <div id="movie-container"></div>
         </div>
     </div>
 
 
-    <script src="details.js"></script>
+
+    <div class="more-movies">
+        <h3>Similar Titles in Free To Watch</h3>
+        <div class="more-movies-container">
+            <!-- <div class="box">
+                <div class="film-box">
+                     <img src="images/main/main1.jpg" alt="" srcset="">
+                     <h4>Avengers: Endgame</h4>
+                     <h6>Action Adventure Drama</h6>
+                </div>
+            </div> -->
+        </div>
+
+
+    </div>
+
+
+
+
     <script src="movies-store.js"></script>
-    <script src="main.js"></script>
+    <script src="script/load_similair_movie.js"></script>
+    <!-- <script src="script/load_navbar.js"></script> -->
+    <!-- <script src="main.js"></script> -->
+    <script src="script/details.js"></script>
+
 </body>
+
 </html>
