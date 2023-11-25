@@ -1,6 +1,6 @@
 
 const filmBoxMovies = document.querySelector(".film-box-lists")
-const repeatDisplay = 9
+const repeatDisplay = 1
 
 function displayMovies(movies) {
 
@@ -39,7 +39,8 @@ for (let i = 0; i < repeatDisplay; i++) {
 const categoriesLink = document.querySelectorAll(".category-link")
 let newArrayMovies = []
 
-categoriesLink.forEach((category) => {
+categoriesLink.forEach((category) => { 
+
     category.addEventListener("click", () => {
 
         while (filmBoxMovies.firstChild) {
@@ -49,20 +50,19 @@ categoriesLink.forEach((category) => {
         const categoryName = category.innerHTML
 
         if (categoryName == 'All categories') {
-            for (let i = 0; i < repeatDisplay; i++) {
-                displayMovies(movies);
-            }
+            newArrayMovies = movies
         } else {
             newArrayMovies = movies.filter((movie) => movie.category.includes(categoryName))
-            for (let i = 0; i < repeatDisplay; i++) {
-                displayMovies(newArrayMovies);
-            }
         }
+    
+        for (let i = 0; i < repeatDisplay; i++) {
+            displayMovies(newArrayMovies);
+        }
+
     })
+
 })
 
-
-const topRated = document.getElementById("toprated")
 
 function displayMovieBasedOnRatingTopRated() {
 
@@ -76,6 +76,9 @@ function displayMovieBasedOnRatingTopRated() {
     for (let i = 0; i < repeatDisplay; i++) {
         displayMovies(newArrayMovies);
     }
+
 }
 
+const topRated = document.getElementById("toprated")
 topRated.addEventListener('click', displayMovieBasedOnRatingTopRated)
+

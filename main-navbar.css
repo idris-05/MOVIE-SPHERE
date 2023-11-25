@@ -19,7 +19,7 @@
 #menu .navbar-content {
 	display: grid;
 	/* grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr ; */
-	grid-template-columns: 1fr 3fr 1fr 1fr 1fr 0.5fr;
+	grid-template-columns: 0.5fr 0.5fr 3fr 1fr 1fr 1fr 0.5fr;
 	column-gap: 0.5vw;
 	margin: 0 1vw;
 	height: 100%;
@@ -29,7 +29,7 @@
 @media (width < 850px) {
 	#menu .navbar-content {
 		/* grid-template-columns: 0.3fr 1.5fr 0.3fr 0.3fr ; */
-		grid-template-columns: 0.3fr 1.5fr 0.3fr;
+		grid-template-columns: 0.3fr 0.3fr 1.5fr 0.3fr;
 	}
 }
 
@@ -73,10 +73,10 @@
 	border: none;
 	cursor: pointer;
 }
-
+/* 
 .hide-logo-or-home {
 	display: none !important;
-}
+} */
 
 
 

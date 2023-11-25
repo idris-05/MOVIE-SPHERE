@@ -7,7 +7,7 @@ function displayMovieDetailsInformation(){
     const movie = movies[movieId]
 
     if ( movieId == null ){
-        console.log('error movieId is null ')
+        // console.log('error movieId is null ')
     } else {
 
         myRoot = document.querySelector(":root")
@@ -101,7 +101,7 @@ function manageWatchLaterCookie(id) {
     }
 
     //  return back to the cookie 
-    const cookieDelay = 60000
+    const cookieDelay = 600000
     const expirationDate = new Date() 
     expirationDate.setTime(expirationDate.getTime() + cookieDelay )
     document.cookie = `idMovies=${JSON.stringify(idMovies)}; expires=${expirationDate.toUTCString()}; path=/`

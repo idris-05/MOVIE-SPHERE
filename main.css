@@ -65,7 +65,8 @@ h6 {
 }
 
 .film-box>img {
-  width: 90%;
+  width: 224px;
+  /* width: 90%; */
   height: 300px;
   border-radius: 3px;
   cursor: pointer;
@@ -120,3 +121,4 @@ h6 {
     width: 60vw;
   }
 }
+
