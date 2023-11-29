@@ -2,32 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width  initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" 
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <!-- <link rel="stylesheet" href="main-navbar.css"> -->
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width  initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="main-navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="footer-integred.css">
+  <link rel="stylesheet" href="watch-later.css">
+  <title>Document</title>
 </head>
 
 <body>
-  
-    <div class="film-box-lists">
-        <!-- <div class="film-box">
-                <img src="images/main/main1.jpg" alt="" srcset="">
-                <h4>Avengers: Endgame</ h4>
-                <h6>Action Adventure Drama</h6>
-            </div>   -->
-      </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-11" viewBox="0 0 40 40">
+      <path
+        d="M15.553 31.106c8.59 0 15.553-6.963 15.553-15.553S24.143 0 15.553 0 0 6.963 0 15.553s6.963 15.553 15.553 15.553zm0-3.888c6.443 0 11.665-5.222 11.665-11.665 0-6.442-5.222-11.665-11.665-11.665-6.442 0-11.665 5.223-11.665 11.665 0 6.443 5.223 11.665 11.665 11.665zM27.76 31.06c-.78-.78-.778-2.05.004-2.833l.463-.463c.783-.783 2.057-.78 2.834-.003l8.168 8.17c.782.78.78 2.05-.003 2.832l-.463.463c-.783.783-2.057.78-2.833.003l-8.17-8.167z"
+        fill-rule="evenodd" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-clear-2" viewBox="0 0 20 20">
+      <path
+        d="M8.96 10L.52 1.562 0 1.042 1.04 0l.522.52L10 8.96 18.438.52l.52-.52L20 1.04l-.52.522L11.04 10l8.44 8.438.52.52L18.96 20l-.522-.52L10 11.04l-8.438 8.44-.52.52L0 18.96l.52-.522L8.96 10z"
+        fill-rule="evenodd" />
+    </symbol>
+  </svg>
+
+  <nav id='menu'></nav>
+  <div class="watchlist-title ">
+    <div class="emptylist ">
+      <h2>Your watch list is now empty </h2>
+      <h3> <span><a href="main.html">discover movies </a></span> now and build your list</h3>
+    </div>
+    <div class="explore ">
+      <h2>Explore Your Watchlist</h2>
+    </div>
+  </div>
+  <div class="film-box-lists">
+    <!-- <div class="film-box">
+      <img src="images/main/main1.jpg" alt="" srcset="">
+      <h4>Avengers: Endgame</ h4>
+      <h6>Action Adventure Drama</h6>
+    </div>   -->
+  </div>
+
+  <footer id="footer-ftr"></footer>
 
 
-
-    <script src="movies-store.js"></script>
-    <script src="script/watch-later.js"></script>
+  <script src="movies-store.js"></script>
+  <script src="main.js"></script>
+  <script src="script/watch-later.js"></script>
+  <script src="script/load_navbar.js"></script>
+  <script src="/script/footer-loader.js"></script>
 </body>
 
 </html>

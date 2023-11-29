@@ -32,11 +32,12 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
+  font-family: "Poppins" , sans-serif;
 }
 
 body {
   background-color: var(--dark-background-color);
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   color: var(--essential-text-color);
 }
 
@@ -49,11 +50,11 @@ h6 {
 }
 
 .film-box-lists {
-  margin: 13vh 1vw;
+  margin: 15vh 1vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-around;
-  row-gap: 1.3vh ;
+  row-gap: 30px ;
 }
 
 .film-box {

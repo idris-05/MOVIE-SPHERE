@@ -181,64 +181,67 @@ const movies = [
   },
 ];
 
-const navbarHTMLContent = `<div class="navbar-content">
+const navbarHTMLContent = `
+<div class="navbar-content">
 
- <div id="logo" >
-   <img src="images/main/main1.jpg" alt="our logo">
- </div>
+      <div id="logo" onclick="redirectToPage('/main.html')">
+        <img src="images/others/MOVIESPHERE-removebg-preview.png" alt="our logo">
+      </div>
 
- <div id="home">
-   <button onclick="redirectToPage('main.html')" type="submit" title="Home Page">
-     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-       <path id="svg-path" d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
-     </svg>
-   </button>
- </div>
+      <div id="home">
+        <button onclick="redirectToPage('/main.html')" type="submit" title="Home Page">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path id="svg-path" d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+          </svg>
+        </button>
+      </div>
 
- <form novalidate class="sbx">
-       <div class="sbx__wrapper">
-         <input class="sbx__input" type="search" name="search" placeholder="Find Movies & TV" autocomplete="off" required="required">
-           <button class="sbx__reset" type="reset" title="Clear the search query." >
-            <svg role="img" aria-label="Reset"><use xlink:href="#sbx-icon-clear-2"></use></svg>
-           </button>
-           <button  class="sbx__submit" type="submit" title="Submit your search query.">
-            <svg role="img" aria-label="Search"><use xlink:href="#sbx-icon-search-11"></use></svg>
-           </button>
-       </div>
- </form>
- 
- <div id="categories"  class="dropdown">
-   <a id="down-symbol" class='dropdown-arrow' >Categories</a>
-   <ul class='sub-menus'>
-     <li><a href="#" class="category-link">All categories</a></li>
-     <li><a href="#" class="category-link">Action</a></li>
-     <li><a href="#" class="category-link">Adventure</a></li>
-     <li><a href="#" class="category-link">Drama</a></li>
-     <li><a href="#" class="category-link">Crime</a></li>
-     <li><a href="#" class="category-link">Fantasy</a></li>
-     <li><a href="#" class="category-link">Family</a></li>
-     <li><a href="#" class="category-link">War</a></li>
-     <li><a href="#" class="category-link">Biography</a></li>
-     <li><a href="#" class="category-link">History</a></li>
-     <li><a href="#" class="category-link">Comedy</a></li>
-   </ul>
- </div>
+      <form novalidate class="sbx">
+            <div class="sbx__wrapper">
+              <input class="sbx__input" type="search" name="search" placeholder="Find Movies & TV" autocomplete="off" required="required">
+                <button class="sbx__reset" type="reset" title="Clear the search query." >
+                 <svg role="img" aria-label="Reset"><use xlink:href="#sbx-icon-clear-2"></use></svg>
+                </button>
+                <button  class="sbx__submit" type="submit" title="Submit your search query.">
+                 <svg role="img" aria-label="Search"><use xlink:href="#sbx-icon-search-11"></use></svg>
+                </button>
+            </div>
+      </form>
+      
+      <div id="categories"  class="dropdown">
+        <a id="down-symbol" class='dropdown-arrow' >Categories</a>
+        <ul class='sub-menus'>
+          <li><a href="#" class="category-link">All categories</a></li>
+          <li><a href="#" class="category-link">Action</a></li>
+          <li><a href="#" class="category-link">Adventure</a></li>
+          <li><a href="#" class="category-link">Drama</a></li>
+          <li><a href="#" class="category-link">Crime</a></li>
+          <li><a href="#" class="category-link">Fantasy</a></li>
+          <li><a href="#" class="category-link">Family</a></li>
+          <li><a href="#" class="category-link">War</a></li>
+          <li><a href="#" class="category-link">Biography</a></li>
+          <li><a href="#" class="category-link">History</a></li>
+          <li><a href="#" class="category-link">Comedy</a></li>
+        </ul>
+      </div>
 
- <a id="toprated" href='#'>Top rated</a>
+      <a id="toprated" href='#'>Top rated</a>
 
- <a id="watchlater"  href="watch-later.html">Watch Later</a> 
+      <a id="watchlater"  href="watch-later.html">Watch Later</a> 
 
- <div class="dropdown">
-   <button id="three-bar" onclick="displayThreeBarDropDown()" class='dropdown-arrow' type="button" > &equiv; </button>
-   <div id="three-bar-content" class='sub-menus'>
-     <div id="three-bar-items">
-       <button class="cancel-btn" type="button" onclick="displayThreeBarDropDown()" >X</button>
-       <a href='#'>Contact us</a>
-       <a href='#'>About</a>
-       <a href='#'>More information</a>
-     </div>
-   </div>
- </div>
+      <div class="dropdown">
+        <button id="three-bar" onclick="displayThreeBarDropDown()" class='dropdown-arrow' type="button" > &equiv; </button>
+        <div id="three-bar-content" class='sub-menus'>
+          <div id="three-bar-items">
+            <button class="cancel-btn" type="button" onclick="displayThreeBarDropDown()" >X</button>
+            <a href='#'>Contact us</a>
+            <a href='#'>About</a>
+            <a href='#'>More information</a>
+          </div>
+        </div>
+      </div>
 
-</div> 
+    </div> 
  `;
+
+ 

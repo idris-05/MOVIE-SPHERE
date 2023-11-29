@@ -11,12 +11,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  /* font-family: "Poppins" , sans-serif; */
 }
 
 footer{
   width: 100%;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 footer .content{
   max-width: 1250px;
@@ -84,23 +84,19 @@ footer .content .link-boxes{
   justify-content: space-between;
 }
 footer .content .link-boxes .box{
-  width: calc(100% / 5 - 10px);
+  width: calc(100% / 4 - 10px);
 }
 .content .link-boxes .box .link_name{
   color:  var(--essential-text-color);
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 10px;
-  position: relative;
+  margin-bottom: 20px;
 }
-.link-boxes .box .link_name::before{
+.link-boxes .box .link_name::after{
   content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  height: 2px;
+  display: block;
+  border-bottom: 2px solid var(--essential-text-color);
   width: 35px;
-  background:  var(--essential-text-color);
 }
 .content .link-boxes .box li{
   margin: 6px 0;
@@ -150,6 +146,8 @@ footer .content .link-boxes .box{
     text-align: left;
     padding-top: 5px;
     padding-left: 10px;
+    height: 40px;
+    resize: vertical;
 }
 .link-boxes .input-box input::placeholder{
   color: #AFAFB6;

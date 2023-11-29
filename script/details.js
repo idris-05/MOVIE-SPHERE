@@ -50,7 +50,7 @@ displayMovieDetailsInformation()
 function getWatchLaterListFromCookies(){
     // get the current saved movies from the cookie
     const cookies = document.cookie.split('; ')
-    let idMovies = [] 
+    let idMovies = []
     for (const cookie of cookies) {
       const [name, value] = cookie.split('=')
       if (name === 'idMovies') {

@@ -1,0 +1,22 @@
+
+.watchlist-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px ;
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: -80px;
+    margin-left: 65px ;
+    color: #EFFAFD;
+}
+.watchlist-title a{
+    color:#a39573;
+}
+.watchlist-title a:hover{
+    text-decoration: underline;
+    color:#EFFAFD ;
+}
+.hide{
+    display: none !important;
+}
