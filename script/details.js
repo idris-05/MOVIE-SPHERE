@@ -1,7 +1,7 @@
 
 const queryParams = new URLSearchParams(window.location.search)
 const movieId = queryParams.get("id")
-
+document.title = `Movie Sphere/main/${movies[movieId].name}`
 
 function displayMovieDetailsInformation(){
     const movie = movies[movieId]
