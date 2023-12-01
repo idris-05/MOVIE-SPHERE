@@ -9,7 +9,8 @@ function displayMovies(movies) {
 
     const movieImage = document.createElement('img')
     movieImage.src = movie.imagePath
-    movieImage.alt = movie.name;
+    movieImage.alt = movie.name
+    movieImage.loading = 'lazy';
 
     const movieName = document.createElement('h4')
     movieName.textContent = movie.name;
@@ -67,8 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     displayMovies(watchLaterMoviesArray)
 
   } else {
-
-    // console.log(" hna lazem nkteb f html file ,  makach 7ta movie rak 7ato f watch list ,  ,,, id movie from cookies is null , from watch-later.js file")
     emptyList.classList.remove("hide")
     explore.classList.add("hide")
 

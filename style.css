@@ -1,3 +1,4 @@
+
 :root{
    --big-font-size :  3.5rem  ;
    --middle-font-size : 1.5rem ;
@@ -16,8 +17,9 @@ body{
 
 
   /* Firefox */
-/* *{ */
-  /* scrollbar-width: auto;
+/* 
+*{
+  scrollbar-width: auto;
   scrollbar-color: #a39573 #ffffff;
 } */
 
@@ -70,9 +72,6 @@ body{
    cursor: pointer; 
 }
 
-
-
-
 .sections{
    background-color: var(--dark-background-color) ;
    color: white;
@@ -86,7 +85,6 @@ body{
    height: 80vh;
    align-items: center;
 }
-
 
 .section-image{
    height: 200px;

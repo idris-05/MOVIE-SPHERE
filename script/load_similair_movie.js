@@ -38,6 +38,6 @@ const queryParams2 = new URLSearchParams(window.location.search)
 const movieId2 = queryParams2.get("id")
 const newArrayMovires = movies.filter((movie) => movie.id != movieId2);
 
-for ( let i = 0 ; i< 3 ; i++){
+// for ( let i = 0 ; i< 1 ; i++){
     displayMoreSimilairMovies(newArrayMovires)
-}
+// }

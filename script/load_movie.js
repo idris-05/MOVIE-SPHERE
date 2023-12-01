@@ -10,7 +10,8 @@ function displayMovies(movies) {
 
         const movieImage = document.createElement('img')
         movieImage.src = movie.imagePath
-        movieImage.alt = movie.name;
+        movieImage.alt = movie.name
+        movieImage.loading = 'lazy';
 
         const movieName = document.createElement('h4')
         movieName.textContent = movie.name;
@@ -31,7 +32,7 @@ function displayMovies(movies) {
     }
 }
 
-for (let i = 0; i < repeatDisplay; i++) {
+for (let i = 0; i < repeatDisplay + 20; i++) {
     displayMovies(movies);
 }
 
@@ -39,7 +40,7 @@ for (let i = 0; i < repeatDisplay; i++) {
 const categoriesLink = document.querySelectorAll(".category-link")
 let newArrayMovies = []
 
-categoriesLink.forEach((category) => { 
+categoriesLink.forEach((category) => {
 
     category.addEventListener("click", () => {
 
@@ -56,6 +57,8 @@ categoriesLink.forEach((category) => {
         }
     
         for (let i = 0; i < repeatDisplay; i++) {
+            const myThreeBarDropDown = document.getElementById("three-bar-content")
+            myThreeBarDropDown.classList.remove("set-three-bar-drop-down-to-display-block")
             displayMovies(newArrayMovies);
         }
 
@@ -79,6 +82,7 @@ function displayMovieBasedOnRatingTopRated() {
 
 }
 
-const topRated = document.getElementById("toprated")
-topRated.addEventListener('click', displayMovieBasedOnRatingTopRated)
-
+document.addEventListener('DOMContentLoaded', ()=> {
+    const topRated = document.getElementById("toprated");
+    topRated.addEventListener('click', displayMovieBasedOnRatingTopRated);
+});

@@ -1,4 +1,6 @@
-
+body{
+    display: none;
+}
 .watchlist-title{
     display: flex;
     flex-direction: column;

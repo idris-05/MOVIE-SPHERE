@@ -2,6 +2,7 @@
 const navbarContainer = document.getElementById("menu")
 navbarContainer.innerHTML = navbarHTMLContent
 
+
 function displayThreeBarDropDown() {
     const myThreeBarDropDown = document.getElementById("three-bar-content")
     myThreeBarDropDown.classList.toggle("set-three-bar-drop-down-to-display-block")
@@ -59,22 +60,3 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
-
-// function hideLogoOrHome() {
-//     const home = document.getElementById("home")
-//     const logo = document.getElementById("logo")
-//     const viewPortWindow = window.innerWidth
-//     const limitWidth = 850
-
-//     if (viewPortWindow < limitWidth) {
-//         logo.classList.add("hide-logo-or-home")
-//         home.classList.remove("hide-logo-or-home")
-//     }
-//     else {
-//         logo.classList.remove("hide-logo-or-home")
-//         home.classList.add("hide-logo-or-home")
-//     }
-// }
-// hideLogoOrHome()
-// window.addEventListener("resize", hideLogoOrHome)
-

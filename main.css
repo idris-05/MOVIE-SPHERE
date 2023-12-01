@@ -36,8 +36,8 @@
 }
 
 body {
+  display: none;
   background-color: var(--dark-background-color);
-  /* font-family: 'Roboto', sans-serif; */
   color: var(--essential-text-color);
 }
 

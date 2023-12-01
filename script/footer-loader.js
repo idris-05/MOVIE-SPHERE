@@ -61,7 +61,7 @@ const footerContent =
       <a href="javascript:void(0);">Privacy policy</a>
       <a href="javascript:void(0);">Terms & condition</a>
     </span>
-    <span class="copyright_text">Copyright © 2023 <a href="/main.html">MOVIESPHERE.</a>All rights reserved</span>
+    <span class="copyright_text">Copyright © 2023 <a href="/main.html">MOVIESPHERE</a>All rights reserved</span>
   </div>
 </div>
 

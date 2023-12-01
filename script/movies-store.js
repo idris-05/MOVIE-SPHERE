@@ -185,7 +185,7 @@ const navbarHTMLContent = `
 <div class="navbar-content">
 
       <div id="logo" onclick="redirectToPage('/main.html')">
-        <img src="images/others/MOVIESPHERE-removebg-preview.png" alt="our logo">
+        <img src="images/others/MOVIESPHERE.png" alt="our logo">
       </div>
 
       <div id="home">
@@ -244,4 +244,3 @@ const navbarHTMLContent = `
     </div> 
  `;
 
- 

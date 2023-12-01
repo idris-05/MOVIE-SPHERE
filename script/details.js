@@ -33,19 +33,19 @@ function displayMovieDetailsInformation(){
             movieCategory.appendChild(movieCategoryNavContainer)
         });
 
-        const movieDescreption =document.getElementById("descreption-text")
-        movieDescreption.innerText =movie.description
+        const movieDescreption = document.getElementById("descreption-text")
+        movieDescreption.innerText = movie.description
 
         const movieDirector = document.getElementById("directed")
-        movieDirector.innerText =movie.directed.join(' , ')
+        movieDirector.innerText = movie.directed.join(' , ')
 
         const movieWriter =document.getElementById("written")
         movieWriter.innerText = movie.written.join(' , ')
     }
 
 }
-displayMovieDetailsInformation()
 
+document.addEventListener('DOMContentLoaded' , displayMovieDetailsInformation )
 
 function getWatchLaterListFromCookies(){
     // get the current saved movies from the cookie
@@ -78,7 +78,7 @@ function loadSaveOrUnsaveButton(id){
 
 }
 
-window.addEventListener("load" ,()=>{
+document.addEventListener('DOMContentLoaded' , ()=>{
     loadSaveOrUnsaveButton(movieId)
 })
 
@@ -101,23 +101,14 @@ function manageWatchLaterCookie(id) {
     }
 
     //  return back to the cookie 
-    const cookieDelay = 600000
+    const cookieDelay = 5*60*1000 // 5 minutes in millisecondes
     const expirationDate = new Date() 
     expirationDate.setTime(expirationDate.getTime() + cookieDelay )
     document.cookie = `idMovies=${JSON.stringify(idMovies)}; expires=${expirationDate.toUTCString()}; path=/`
-
-    // alert(`movie ${movies[id].name} is add to the watch later list`)
    
 }
 
 const saveToLaterButton = document.getElementById('save-to-later')
-saveToLaterButton.addEventListener('click', function () {
+saveToLaterButton.addEventListener('click' , ()=>{
     manageWatchLaterCookie(movieId);
 })
-
-
-
-
-
-
-

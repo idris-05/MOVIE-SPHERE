@@ -18,7 +18,6 @@
 
 #menu .navbar-content {
 	display: grid;
-	/* grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr ; */
 	grid-template-columns: 0.5fr 0.5fr 3fr 1fr 1fr 1fr 0.5fr;
 	column-gap: 0.5vw;
 	margin: 0 1vw;
@@ -28,7 +27,6 @@
 
 @media (width < 850px) {
 	#menu .navbar-content {
-		/* grid-template-columns: 0.3fr 1.5fr 0.3fr 0.3fr ; */
 		grid-template-columns: 0.3fr 0.3fr 1.5fr 0.3fr;
 	}
 }
@@ -73,12 +71,6 @@
 	border: none;
 	cursor: pointer;
 }
-/* 
-.hide-logo-or-home {
-	display: none !important;
-} */
-
-
 
 
 #menu a {
@@ -180,7 +172,6 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	/* left: inherit; */
 	border: 0;
 	border-radius: 0 4px 4px 0;
 	background-color: var(--secodedary-text-color);
@@ -266,10 +257,6 @@
 		opacity: 1;
 	}
 }
-
-
-
-
 
 #three-bar {
 	font-size: 30px;
